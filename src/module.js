@@ -1,5 +1,5 @@
 import {createAction} from 'redux-actions';
-import {Sender} from "../test/sender";
+import {Sender} from "../redux/sender";
 
 const PENDING = 'PENDING',
     FULFILLED = 'FULFILLED',
