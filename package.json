@@ -4,7 +4,7 @@
   "description": "A basic module helper for storing and managing local data",
   "author": "Evgeniy Kirichok <evgeniy.kirichok@gmail.com>",
   "license": "Apache-2.0",
-  "private": true,
+  "private": false,
   "keywords": [
     "android",
     "ios",

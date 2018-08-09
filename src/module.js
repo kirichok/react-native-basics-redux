@@ -157,3 +157,5 @@ class Action {
         return this._handle(data);
     }
 }
+
+export {Module, Action}

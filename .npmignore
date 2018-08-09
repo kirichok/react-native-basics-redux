@@ -1,0 +1,11 @@
+tests
+example
+node_modules
+.babelrc
+.flowconfig
+.gitignore
+.watchmanconfig
+.idea
+.git
+**/__mocks__/**
+**/__tests__/**
