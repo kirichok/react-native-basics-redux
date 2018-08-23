@@ -9,14 +9,14 @@ const ACTION_CLEAR_ERROR = 'CLEAR_ERROR',
     ACTION_INITIAL_STATE = 'INITIAL_STATE';
 
 class Module {
-    constructor(name, sender, initialState) {
-        if (!sender || !sender instanceof Sender) {
+    constructor(name, /*sender,*/ initialState) {
+        /*if (!sender || !sender instanceof Sender) {
             throw new Error('Wrong sender instance for module');
-        }
+        }*/
 
         this.name = name;
         this.nameLen = name.length;
-        this.sender = sender;
+        // this.sender = sender;
 
         this.initalState = {
             loading: false,
@@ -45,8 +45,8 @@ class Module {
     _getActionName(nameActionType, type = '') {
         if (!this.nameActionTypes[nameActionType]) {
             this.nameActionTypes[nameActionType] = nameActionType.substring(
-                this.nameLen,
-                nameActionType.length - type.length
+                this.nameLen + 1,
+                nameActionType.length - type.length - 1
             );
         }
         return this.nameActionTypes[nameActionType];
@@ -58,12 +58,12 @@ class Module {
         });
     }
 
-    registerAction(name, handle,) {
+    registerAction(name, handle) {
         const action = new Action(this.name, name, handle);
-        if (this.actions[action.name]) {
+        if (this.actions[name]) {
             throw new Error(`Duplicate action name: ${action.name}`);
         }
-        this.actions[action.name] = action;
+        this.actions[name] = action;
         return action;
     }
 
@@ -158,4 +158,4 @@ class Action {
     }
 }
 
-export {Module, Action}
+export {Module}

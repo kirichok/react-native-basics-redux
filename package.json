@@ -1,6 +1,6 @@
 {
   "name": "react-native-basics-redux",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A basic module helper for storing and managing local data",
   "author": "Evgeniy Kirichok <evgeniy.kirichok@gmail.com>",
   "license": "Apache-2.0",

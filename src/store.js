@@ -4,7 +4,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 
 let _reducers;
 
-function defineReducers(reducers) {
+export function defineReducers(reducers) {
     _reducers = combineReducers(reducers);
 }
 
