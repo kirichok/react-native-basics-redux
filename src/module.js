@@ -58,9 +58,9 @@ class Module {
         });
     }
 
-    registerAction(name, handle) {
+    registerAction(name, handle, overwrite = false) {
         const action = new Action(this.name, name, handle);
-        if (this.actions[name]) {
+        if (!overwrite && this.actions[name]) {
             throw new Error(`Duplicate action name: ${action.name}`);
         }
         this.actions[name] = action;
