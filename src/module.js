@@ -46,7 +46,7 @@ class Module {
         if (!this.nameActionTypes[nameActionType]) {
             this.nameActionTypes[nameActionType] = nameActionType.substring(
                 this.nameLen + 1,
-                nameActionType.length - type.length - 1
+                nameActionType.length - (type.length ? type.length + 1 : 0)
             );
         }
         return this.nameActionTypes[nameActionType];
